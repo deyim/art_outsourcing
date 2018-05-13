@@ -36,6 +36,7 @@ var turnWebCam = function() {
 var turnVideo = function(vidNum){
   var vid = document.getElementById('video-stream');
   vid.src = 'videos/test'+vidNum+'.mp4';
+  vid.play();
 }
 var socket = io();
 
