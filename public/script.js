@@ -1,3 +1,4 @@
+var vidFlag = false;
 var turnWebCam = function() {
 
     // Normalize the various vendor prefixed versions of getUserMedia.
@@ -35,7 +36,8 @@ var turnWebCam = function() {
 
 var turnVideo = function(vidNum){
   var vid = document.getElementById('video-stream');
-  vid.src = 'videos/test'+(vidNum+1)+'.mp4';
+  // vid.src = 'videos/test'+(vidNum+1)+'.mp4';
+  vid.src = 'https://s3.ap-northeast-2.amazonaws.com/elasticbeanstalk-ap-northeast-2-331932344038/test'+(vidNum+1)+'.mp4';
   var playPromise = vid.play();
   if (playPromise !== undefined) {
     playPromise.then(_ => {
