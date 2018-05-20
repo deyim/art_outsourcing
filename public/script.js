@@ -36,7 +36,18 @@ var turnWebCam = function() {
 var turnVideo = function(vidNum){
   var vid = document.getElementById('video-stream');
   vid.src = 'videos/test'+vidNum+'.mp4';
-  vid.play();
+  var playPromise = vid.play();
+  if (playPromise !== undefined) {
+    playPromise.then(_ => {
+      // Automatic playback started!
+      // Show playing UI.
+    })
+    .catch(error => {
+      // Auto-play was prevented
+      // Show paused UI.
+    });
+  }
+
 }
 var socket = io();
 
@@ -61,6 +72,7 @@ socket.on('ifSync', function (data) {
   }
 
 });
+
 
 socket.on('disconnect', function(){
     console.log('disconnected');
