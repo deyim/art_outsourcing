@@ -35,7 +35,7 @@ var turnWebCam = function() {
 
 var turnVideo = function(vidNum){
   var vid = document.getElementById('video-stream');
-  vid.src = 'videos/test'+vidNum+'.mp4';
+  vid.src = 'videos/test'+(vidNum+1)+'.mp4';
   var playPromise = vid.play();
   if (playPromise !== undefined) {
     playPromise.then(_ => {
