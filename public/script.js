@@ -1,3 +1,8 @@
+// var goFS = document.getElementById("goFS");
+//   goFS.addEventListener("click", function() {
+//       var vid = document.getElementById('video-stream');
+//       vid.webkit.requestFullscreen();
+//   }, false);
 var vidFlag = false;
 var turnWebCam = function() {
 
@@ -22,6 +27,9 @@ var turnWebCam = function() {
         // Create an object URL for the video stream and use this 
         // to set the video source.
         vid.src = window.URL.createObjectURL(localMediaStream);
+        if (vid.webkitRequestFullscreen) {
+          vid.webkitRequestFullscreen();
+        }
     },
       // Error Callback
       function(err) {
@@ -38,6 +46,7 @@ var turnVideo = function(vidNum){
   var vid = document.getElementById('video-stream');
   // vid.src = 'videos/test'+(vidNum+1)+'.mp4';
   vid.src = 'https://s3.ap-northeast-2.amazonaws.com/elasticbeanstalk-ap-northeast-2-331932344038/test'+(vidNum+1)+'.mp4';
+  
   vid.play();
   // var playPromise = vid.play();
   // if (playPromise !== undefined) {
