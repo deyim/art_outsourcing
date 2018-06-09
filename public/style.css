@@ -1,12 +1,12 @@
 html {
-  width: 800px;
-  height: 1280px;
+  width: 100%;
+  height: 140%;
   /* display: table; */
 }
 
 body {
-  width: 800px;
-  height: 1280px;
+  width: 100%;
+  height: 100%;
   /* display:table-cell; */
 }
 /* body {
@@ -16,7 +16,7 @@ body {
 } */
 
 #video-container #video-stream{
-  width: 800px;
-  height: 1280px;
+  width: 100%;
+  height: 100%;
   margin: 0px;
 }
