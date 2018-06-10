@@ -12,12 +12,12 @@ var turnWebCam = function() {
     navigator.getUserMedia(
       // Constraints
     {
-        video: true
+        // video: true
         // audio: true,
-        // video: {
-        //   width: 1200,
-        //   height: 600
-        // }
+        video: {
+          width: 1200,
+          height: 600
+        }
     },  
       // Success Callback
     function(localMediaStream) {
