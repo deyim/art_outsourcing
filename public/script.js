@@ -44,15 +44,8 @@ var turnVideo = function(vidNum){
   // vid.src = 'videos/test'+(vidNum+1)+'.mp4';
   vid.src = 'https://s3.ap-northeast-2.amazonaws.com/elasticbeanstalk-ap-northeast-2-331932344038/test'+(vidNum+1)+'.mp4';
   
-  // vid.play();
-  var promise = vid.play();
-  if (promise !== undefined) {
-    promise.then(_ => {
-      // Autoplay started!
-    }).catch(error => {
-      alert("error");
-    });
-  }
+  vid.play();
+  
 
 }
 var socket = io();
