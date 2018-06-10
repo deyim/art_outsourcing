@@ -13,6 +13,7 @@ var turnWebCam = function() {
       // Constraints
     {
         // video: true
+        // audio: true,
         video: {
           width: 800,
           height: 1280
@@ -43,17 +44,6 @@ var turnVideo = function(vidNum){
   // vid.src = 'videos/test'+(vidNum+1)+'.mp4';
   vid.src = 'https://s3.ap-northeast-2.amazonaws.com/elasticbeanstalk-ap-northeast-2-331932344038/test'+(vidNum+1)+'.mp4';
   vid.play();
-  // var playPromise = vid.play();
-  // if (playPromise !== undefined) {
-  //   playPromise.then(_ => {
-  //     // Automatic playback started!
-  //     // Show playing UI.
-  //   })
-  //   .catch(error => {
-  //     // Auto-play was prevented
-  //     // Show paused UI.
-  //   });
-  // }
 
 }
 var socket = io();
