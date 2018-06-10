@@ -15,8 +15,8 @@ var turnWebCam = function() {
         // video: true
         // audio: true,
         video: {
-          width: 800,
-          height: 1280
+          width: 400,
+          height: 1000
         }
     },  
       // Success Callback
