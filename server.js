@@ -22,14 +22,8 @@ io.on('connection', (socket)=>{
     console.log('new user came');
 
     socket.on('doorSync', function(msg){
-        // msg.ifSync
-        // msg.vidNumber
         console.log(msg);
         socket.broadcast.emit('ifSync',msg);
-    })
-
-    socket.on('webcam', ()=>{
-
     })
    
     socket.on('disconnect', ()=>{
