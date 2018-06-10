@@ -12,12 +12,7 @@ var turnWebCam = function() {
     navigator.getUserMedia(
       // Constraints
     {
-        // video: true
-        // audio: true,
-        video: {
-          width: 1200,
-          height: 600
-        }
+        video: true
     },  
       // Success Callback
     function(localMediaStream) {
@@ -43,19 +38,14 @@ var turnVideo = function(vidNum){
   var vid = document.getElementById('video-stream');
   // vid.src = 'videos/test'+(vidNum+1)+'.mp4';
   vid.src = 'https://s3.ap-northeast-2.amazonaws.com/elasticbeanstalk-ap-northeast-2-331932344038/test'+(vidNum+1)+'.mp4';
-  vid.play(); 
+  
+  vid.play();
 
 }
-
-var videoClear = function(){
-  var vid = document.getElementById('video-stream');
-  vid.src = window.URL.createObjectURL(localMediaStream);
-}
-
 var socket = io();
 
 socket.on('connect', function(){
-    console.log('Connected to server!!');
+    console.log('Connected to server');
 }); 
 
 socket.on('ifSync', function (data) {
