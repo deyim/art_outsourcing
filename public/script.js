@@ -12,7 +12,11 @@ var turnWebCam = function() {
     navigator.getUserMedia(
       // Constraints
     {
-        video: true
+        // video: true
+        video:{
+          width: 800,
+          height: 400
+        }
     },  
       // Success Callback
     function(localMediaStream) {
